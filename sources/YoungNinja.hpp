@@ -21,4 +21,5 @@ public:
     YoungNinja &operator=(const YoungNinja &other);
     YoungNinja(YoungNinja &&other) noexcept;
     YoungNinja &operator=(YoungNinja &&other) noexcept;
+    void move(Character *enemy);
 };

@@ -11,15 +11,10 @@
 #include "string"
 using namespace std;
 
-OldNinja::OldNinja(string name, Point point)
-{
-    this->name = name;
-    this->location = point;
-    this->speed = 8;
-    this->hit_points = 150;
-}
+OldNinja::OldNinja(string name, Point point) : Ninja(point, 150, name, 8) {}
 OldNinja::~OldNinja() {}
 OldNinja::OldNinja(const OldNinja &temp) {}
-OldNinja &OldNinja::operator=(const OldNinja &other) {return *this;}
+OldNinja &OldNinja::operator=(const OldNinja &other) { return *this; }
 OldNinja::OldNinja(OldNinja &&other) noexcept {}
-OldNinja &OldNinja::operator=(OldNinja &&other) noexcept {return *this;}
+OldNinja &OldNinja::operator=(OldNinja &&other) noexcept { return *this; }
+void OldNinja::move(Character *enemy) {}

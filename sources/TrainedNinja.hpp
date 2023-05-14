@@ -21,4 +21,5 @@ public:
     TrainedNinja &operator=(const TrainedNinja &other);
     TrainedNinja(TrainedNinja &&other) noexcept;
     TrainedNinja &operator=(TrainedNinja &&other) noexcept;
+    void move(Character *enemy);
 };

@@ -15,12 +15,14 @@ public:
     Point location;
     int hit_points;
     string name;
+
     Character();
     Character(Point point1, int hit_points, string name);
+    virtual ~Character();
     bool isAlive();
     double distance(Character *other);
     void hit(int num);
     string getName();
     Point getLocation();
-    string print();
+    virtual string print();
 };

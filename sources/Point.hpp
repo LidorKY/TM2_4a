@@ -14,7 +14,7 @@ class Point{
 
     public:
     Point();
-    Point(double x, double y);
+    Point(double num_x, double num_y);
 
     double distance(Point point1);
     void print(Point point1);

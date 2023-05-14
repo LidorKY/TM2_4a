@@ -12,10 +12,8 @@ using namespace std;
 
 class Ninja : public Character
 {
-    protected:
-    int speed;
-
-    public:
-    void move(Character* enemy);
-    void slash(Character* enemy);
+public:
+    int speed = 0;
+    void move(Character *enemy);
+    void slash(Character *enemy);
 };

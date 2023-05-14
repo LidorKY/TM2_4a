@@ -11,12 +11,12 @@ using namespace std;
 
 class Character
 {
-protected:
-    Point location;
-    int hp;
-    string name;
-
 public:
+    Point location;
+    int hit_points;
+    string name;
+    Character();
+    Character(Point point1, int hit_points, string name);
     bool isAlive();
     double distance(Character *other);
     void hit(int num);

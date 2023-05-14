@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -17,5 +16,10 @@ TrainedNinja::TrainedNinja(string name, Point point)
     this->name = name;
     this->location = point;
     this->speed = 12;
-    this->hp = 120;
+    this->hit_points = 120;
 }
+TrainedNinja::~TrainedNinja() {}
+TrainedNinja::TrainedNinja(const TrainedNinja &temp) {}
+TrainedNinja &TrainedNinja::operator=(const TrainedNinja &other) {return *this;}
+TrainedNinja::TrainedNinja(TrainedNinja &&other) noexcept {}
+TrainedNinja &TrainedNinja::operator=(TrainedNinja &&other) noexcept {return *this;}

@@ -16,4 +16,9 @@ class YoungNinja : public Ninja
 private:
 public:
     YoungNinja(string name, Point point);
+    ~YoungNinja();
+    YoungNinja(const YoungNinja &temp);
+    YoungNinja &operator=(const YoungNinja &other);
+    YoungNinja(YoungNinja &&other) noexcept;
+    YoungNinja &operator=(YoungNinja &&other) noexcept;
 };

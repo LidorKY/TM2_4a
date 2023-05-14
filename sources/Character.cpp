@@ -7,6 +7,8 @@
 #include "Character.hpp"
 using namespace std;
 
+Character::Character() {}
+Character::Character(Point point1, int hit_points, string name) {}
 bool Character::isAlive() { return true; }
 double Character::distance(Character *other) { return 0.0; }
 void Character::hit(int num) {}

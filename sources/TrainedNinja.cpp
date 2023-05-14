@@ -16,6 +16,6 @@ TrainedNinja::TrainedNinja(string name, Point point)
 {
     this->name = name;
     this->location = point;
-    this->speed = 14;
-    this->hp = 100;
+    this->speed = 12;
+    this->hp = 120;
 }

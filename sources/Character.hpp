@@ -19,6 +19,10 @@ public:
     Character();
     Character(Point point1, int hit_points, string name);
     virtual ~Character();
+    Character(const Character &temp);
+    Character &operator=(const Character &other);
+    Character(Character &&other) noexcept;
+    Character &operator=(Character &&other) noexcept;
     bool isAlive();
     double distance(Character *other);
     void hit(int num);

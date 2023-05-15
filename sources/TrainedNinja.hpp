@@ -16,10 +16,10 @@ class TrainedNinja : public Ninja
 private:
 public:
     TrainedNinja(string name, Point point);
-    ~TrainedNinja();
-    TrainedNinja(const TrainedNinja &temp);
-    TrainedNinja &operator=(const TrainedNinja &other);
-    TrainedNinja(TrainedNinja &&other) noexcept;
-    TrainedNinja &operator=(TrainedNinja &&other) noexcept;
-    void move(Character *enemy);
+    // ~TrainedNinja();
+    // TrainedNinja(const TrainedNinja &temp);
+    // TrainedNinja &operator=(const TrainedNinja &other);
+    // TrainedNinja(TrainedNinja &&other) noexcept;
+    // TrainedNinja &operator=(TrainedNinja &&other) noexcept;
+    // void move(Character *enemy);
 };

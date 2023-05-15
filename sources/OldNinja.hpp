@@ -16,10 +16,10 @@ class OldNinja : public Ninja
 private:
 public:
     OldNinja(string name, Point point);
-    ~OldNinja();
-    OldNinja(const OldNinja &temp);
-    OldNinja &operator=(const OldNinja &other);
-    OldNinja(OldNinja &&other) noexcept;
-    OldNinja &operator=(OldNinja &&other) noexcept;
-    void move(Character *enemy);
+    // ~OldNinja();
+    // OldNinja(const OldNinja &temp);
+    // OldNinja &operator=(const OldNinja &other);
+    // OldNinja(OldNinja &&other) noexcept;
+    // OldNinja &operator=(OldNinja &&other) noexcept;
+    // void move(Character *enemy);
 };

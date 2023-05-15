@@ -13,9 +13,9 @@ using namespace std;
 class Cowboy : public Character
 {
 private:
-    int num_of_bullets;
 
 public:
+    int num_of_bullets;
     Cowboy(string name, Point point);
     // ~Cowboy();
     // Cowboy(const Cowboy &temp);

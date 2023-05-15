@@ -52,7 +52,6 @@ TEST_CASE("Cowboy vs Ninja")
     Point a(32.3, 44), b(1.3, 3.5);
     Cowboy *tom = new Cowboy("Tom", a);
     OldNinja *sushi = new OldNinja("sushi", b);
-
     CHECK(tom->distance(sushi) == 5);
     CHECK(tom->hasboolets() == true);
     tom->shoot(sushi);
@@ -67,4 +66,45 @@ TEST_CASE("Cowboy vs Ninja")
     tom->reload();
     CHECK(tom->hasboolets() == true);
     CHECK(sushi->isAlive() == true);
+}
+
+TEST_CASE("Check for class -Team")
+{
+    Point a(32.3, 44), b(1.3, 3.5), c(0.0, 0.0), d(4.33, 29.46);
+    Cowboy *tom = new Cowboy("Tom", a);
+    OldNinja *sushi = new OldNinja("sushi", b);
+    YoungNinja *mushi = new YoungNinja("mushi", c);
+    TrainedNinja *kushi = new TrainedNinja("kushi", d);
+
+    /*----Init teams----*/
+    Team team1(tom);
+    CHECK(team1._leader == tom);
+    CHECK(team1.stillAlive() == true);
+    CHECK_THROWS(team1.add(tom));
+
+    Team team2(sushi);
+    CHECK(team2._leader == sushi);
+    CHECK(team2.stillAlive() == true);
+    CHECK_THROWS(team2.add(sushi));
+
+    Team team3(mushi);
+    CHECK(team3._leader == mushi);
+    CHECK(team3.stillAlive() == true);
+    CHECK_THROWS(team3.add(mushi));
+
+    Team team4(kushi);
+    CHECK(team4._leader == kushi);
+    CHECK(team4.stillAlive() == true);
+    CHECK_THROWS(team4.add(kushi));
+    /*----Init teams----*/
+
+    /*----playing + killing the leader*/
+    team1.attack(&team2);
+    CHECK(team2._leader == sushi);
+    CHECK(team2.stillAlive() == true);
+
+    team3.attack(&team4);
+    CHECK(team4._leader == kushi);
+    CHECK(team4.stillAlive() == true);
+    /*----playing + killing the leader*/
 }

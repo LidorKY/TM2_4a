@@ -17,4 +17,4 @@ TrainedNinja::TrainedNinja(string name, Point point) : Ninja(point, 120, name, 1
 // TrainedNinja &TrainedNinja::operator=(const TrainedNinja &other) { return *this; }
 // TrainedNinja::TrainedNinja(TrainedNinja &&other) noexcept {}
 // TrainedNinja &TrainedNinja::operator=(TrainedNinja &&other) noexcept { return *this; }
-// void TrainedNinja::move(Character *enemy) {}
+void TrainedNinja::move(Character *enemy) {}

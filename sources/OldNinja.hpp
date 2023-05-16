@@ -21,5 +21,5 @@ public:
     // OldNinja &operator=(const OldNinja &other);
     // OldNinja(OldNinja &&other) noexcept;
     // OldNinja &operator=(OldNinja &&other) noexcept;
-    // void move(Character *enemy);
+    void move(Character *enemy);
 };
